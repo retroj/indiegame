@@ -1,0 +1,5 @@
+#!/bin/sh
+exec awful --ip-address=127.0.0.1 \
+    --privileged-code=privileged-local.conf \
+    --development-mode \
+    `pwd`/indiegame
