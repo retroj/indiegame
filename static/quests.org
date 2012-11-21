@@ -106,6 +106,22 @@ DEFEATED.  Voting could be done with a checkbox list.  People would list
 their names, and check the box for a vote in favor, not for a vote
 against.  Votes would be tallied by "[/]" syntax in the header.
 
+* QUEST Change name of game
+  :LOGBOOK:
+  - State -> "QUEST"  [2012-11-20 Tue]
+  :END:
+
+Proposal to change the name of the game from:
+
+  Indie Game Dev Simulator: The Indie Game Development Simulator Game
+
+to:
+
+  Indie Game Dev Simulator: The Indie Game Development Simulation Game
+
+** VOTE shall we change the name? [1/1]
+ - [X] retroj
+
 * Local Variables
 # Local Variables:
 # org-treat-insert-todo-heading-as-state-change:t
