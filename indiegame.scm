@@ -12,5 +12,5 @@
 
 (define-page "/"
   (lambda ()
-    `((h1 "Indie Game Dev Simulator: The Indie Game Development Simulator Game")))
-  title: "Indie Game Dev Simulator: The Indie Game Development Simulator Game")
+    `((h1 "Indie Game Dev Simulator: The Indie Game Development Simulation Game")))
+  title: "Indie Game Dev Simulator: The Indie Game Development Simulation Game")
