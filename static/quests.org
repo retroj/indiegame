@@ -89,10 +89,14 @@ Would fossil be better suited to this project than git + org-mode?
 
 #indiegame on freenode
 
-* QUEST put this project on a public git host
+* COMPLETED put this project on a public git host
   :LOGBOOK:
   - State -> "QUEST"  [2012-11-20 Tue]
+  - State -> "COMPLETED"  [2012-11-20 Tue] \\
+    retroj
   :END:
+
+done.  https://github.com/retroj/indiegame
 
 * COMPLETED make a voting system
   :LOGBOOK:
