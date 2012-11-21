@@ -8,7 +8,7 @@
 (page-doctype doctype-html)
 (page-charset "UTF-8")
 (enable-sxml #t)
-(literal-script/style? #t)
+;;(literal-script/style? #t)
 
 (define-page "/"
   (lambda ()
