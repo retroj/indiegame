@@ -1,0 +1,114 @@
+#+TODO: QUEST(q!) | COMPLETED(c@)
+#+TODO: VOTE(v!) | PASSED(p!) DEFEATED(d!)
+#+STARTUP: nologdone oddeven
+
+* QUEST design the org-mode format for quests.org
+  :LOGBOOK:
+  - State -> "QUEST"  [2012-11-20 Tue]
+  :END:
+** comments
+*** retroj [2012-11-20 Tue]
+
+The main difficulty here is that to use org-mode for collaborative
+editing, org-mode must be configured the same for all participants, at
+least locally to the file(s) being jointly edited.  This can be done
+mostly via org file properties (#+PROP: headers) and a local variables
+section at the end of the file.
+
+Org-log-note-headings though, is a problem.  I use a non-standard format
+for state changes in my org-mode, so whether we use the standard format or
+my non-standard format or another, we need a buffer-local value for
+org-log-note-headings.  However, a buffer-local value for this variable
+seems to have no effect.
+
+This is because at the point when org-mode checks the value of
+org-log-note-headings, the current buffer is not the original org file,
+but a temporary buffer, "*Org Note*".  This happens whether or not a note
+is actually to be edited for the state change.
+
+One solution would be to patch org-store-log-note to do the `(kill-buffer
+(current-buffer))` before accessing the value of org-log-note-headings.
+
+Tested with org-mode versions 7.7 and 7.9.2.
+
+Sent patch to org-mode mailing list.
+
+*** retroj [2012-11-20 Tue]
+
+We should use #+STARTUP keywords instead of file-local variables, where
+possible.
+
+ - nologdone: org-log-done:nil
+ - oddeven: allow all outline levels
+
+*** retroj [2012-11-20 Tue]
+
+We need a good structure for comments.  Perhaps comments should be a TODO
+type; this would allow us to mark a given comment as having been
+addressed or not in the completion of the quest.
+
+*** retroj [2012-11-20 Tue]
+
+Investigate whether we can use #+SETUPFILE to shorten the headings in
+quest files.
+
+*** retroj [2012-11-20 Tue]
+
+Credit for completion of quest.  Two obvious ways to do this: 1) store
+the name of the person as a note on the logbook state change; 2) have the
+format of each state change include "%u", which is the user name.  2
+seems more elegant than 1 to me, but it would require that users should
+use the same username in the game that they use on their own computer.
+
+* QUEST make a simple homepage for indiegame that shows this file
+  :LOGBOOK:
+  - State -> "QUEST"  [2012-11-19 Mon]
+  :END:
+
+The display should not show comments, and should not show the "Local
+Variables" heading at the end.
+
+* QUEST consider fossil
+  :LOGBOOK:
+  - State -> "QUEST"  [2012-11-20 Tue]
+  :END:
+
+Would fossil be better suited to this project than git + org-mode?
+
+* QUEST make a metaforum on the website
+  :LOGBOOK:
+  - State -> "QUEST"  [2012-11-20 Tue]
+  :END:
+
+* COMPLETED make an irc channel
+  :LOGBOOK:
+  - State -> "QUEST"  [2012-11-20 Tue]
+  - State -> "COMPLETED"  [2012-11-20 Tue] \\
+    retroj
+  :END:
+
+#indiegame on freenode
+
+* QUEST put this project on a public git host
+  :LOGBOOK:
+  - State -> "QUEST"  [2012-11-20 Tue]
+  :END:
+
+* COMPLETED make a voting system
+  :LOGBOOK:
+  - State -> "QUEST"  [2012-11-20 Tue]
+  - State -> "COMPLETED"  [2012-11-20 Tue] \\
+    retroj
+  :END:
+
+The voting system can be a set of TODO keywords, like VOTE | PASSED
+DEFEATED.  Voting could be done with a checkbox list.  People would list
+their names, and check the box for a vote in favor, not for a vote
+against.  Votes would be tallied by "[/]" syntax in the header.
+
+* Local Variables
+# Local Variables:
+# org-treat-insert-todo-heading-as-state-change:t
+# org-log-states-order-reversed:nil
+# org-log-into-drawer:t
+# End:
