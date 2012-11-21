@@ -60,6 +60,13 @@ format of each state change include "%u", which is the user name.  2
 seems more elegant than 1 to me, but it would require that users should
 use the same username in the game that they use on their own computer.
 
+*** retroj [2012-11-20 Tue]
+
+We need a system for quests that everybody does that differentiates them
+from quests that are only done once.  Probably a TODO group that always
+remains open, but still allows users to log their personal completion of
+the quest.
+
 * QUEST make a simple homepage for indiegame that shows this file
   :LOGBOOK:
   - State -> "QUEST"  [2012-11-19 Mon]
