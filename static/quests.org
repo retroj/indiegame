@@ -43,9 +43,9 @@ possible.
 
 *** retroj [2012-11-20 Tue]
 
-We need a good structure for comments.  Perhaps comments should be a TODO
-type; this would allow us to mark a given comment as having been
-addressed or not in the completion of the quest.
+We need a good structure for comments (discussion of quests).  Perhaps
+comments should be a TODO type; this would allow us to mark a given
+comment as having been addressed or not in the completion of the quest.
 
 *** retroj [2012-11-20 Tue]
 
