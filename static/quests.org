@@ -3,6 +3,18 @@
 #+TODO: TRAININGQUEST(t) | TRAININGCOMPLETED(x@)
 #+STARTUP: nologdone oddeven
 
+* TRAININGQUEST run and view the indiegame website locally
+  :LOGBOOK:
+  - State -> "TRAININGCOMPLETED"  [2012-11-21 Wed] \\
+    retroj
+  :END:
+
+ - Install Chicken Scheme
+ - Install the Awful web framework (chicken-install awful)
+ - Install the doctype egg (chicken-install doctype)
+ - run ./indiegame-localhost
+ - visit http://localhost:8080/ in a web browser and be edified
+
 * QUEST design the org-mode format for quests.org
   :LOGBOOK:
   - State -> "QUEST"  [2012-11-20 Tue]
