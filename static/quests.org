@@ -119,9 +119,9 @@ to:
 
   Indie Game Dev Simulator: The Indie Game Development Simulation Game
 
-** VOTE shall we change the name? [1/1]
+** VOTE shall we change the name? [2/2]
  - [X] retroj
-
+ - [X] escondida
 * Local Variables
 # Local Variables:
 # org-treat-insert-todo-heading-as-state-change:t
