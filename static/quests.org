@@ -60,12 +60,25 @@ format of each state change include "%u", which is the user name.  2
 seems more elegant than 1 to me, but it would require that users should
 use the same username in the game that they use on their own computer.
 
-*** retroj [2012-11-20 Tue]
+*** QUEST system for quests that everybody does
+    :LOGBOOK:
+    - State -> "QUEST"  [2012-11-20 Tue]
+    :END:
 
 We need a system for quests that everybody does that differentiates them
 from quests that are only done once.  Probably a TODO group that always
 remains open, but still allows users to log their personal completion of
 the quest.
+
+we could use QUEST (or TRAININGQUEST, or something else), but instead of
+changing the TODO state, users who complete it use org-add-note.  if we
+can have a buffer-local org-log-note-headings, then we can have a nice
+format for the notes.
+
+another idea is to have a TODO group, TRAININGQUEST | DONE, where DONE
+logs the transition, but TRAININGQUEST does not.  when a person does the
+quest, they set it to DONE to log their completion of it, and then toggle
+it back to TRAININGQUEST.
 
 * QUEST make a simple homepage for indiegame that shows this file
   :LOGBOOK:
