@@ -20,7 +20,12 @@
   - State -> "QUEST"  [2012-11-20 Tue]
   :END:
 ** comments
-*** retroj [2012-11-20 Tue]
+*** COMPLETED deal with org-log-note-headings
+    :LOGBOOK:
+    - State -> "QUEST"  [2012-11-20 Tue]
+    - State -> "COMPLETED"  [2012-11-25 Sun] \\
+      retroj; patch accepted
+    :END:
 
 The main difficulty here is that to use org-mode for collaborative
 editing, org-mode must be configured the same for all participants, at
